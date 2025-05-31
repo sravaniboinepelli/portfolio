@@ -1,8 +1,6 @@
 :root {
   --brand-primary: #667eea;
   --brand-secondary: #764ba2;
-  --brand-accent: #f093fb;
-  --brand-dark: #2d3748;
   --text-main: #2d3748;
   --text-light: #ffffff;
   --text-muted: #718096;
@@ -15,7 +13,6 @@
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.04);
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #667eea 100%);
   --gradient-button: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
   --animate: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --animate-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -407,32 +404,15 @@ section {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  min-height: 250px;
 }
 
 .about-image {
   width: 100%;
   height: auto;
   display: block;
-  transition: var(--animate);
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--gradient-primary);
-  opacity: 0;
-  transition: var(--animate);
-}
-
-.about-image-wrapper:hover .image-overlay {
-  opacity: 0.2;
-}
-
-.about-image-wrapper:hover .about-image {
-  transform: scale(1.05);
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .greeting {
@@ -605,10 +585,8 @@ section {
   height: 100%;
   object-fit: cover;
   transition: var(--animate-slow);
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.1);
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .project-overlay {
